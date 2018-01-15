@@ -34,3 +34,22 @@ public class Test{
     }
 
 }
+//a very simple example
+public class Example{
+   public static void print(int x){
+        System.out.println("I am an integer " + x);
+    }
+   public static void print(String x){
+        System.out.println("I am a String " + x);
+    }
+    public static void print(float x){
+
+        System.out.println("I am a float " +x);
+    }
+    public static void main(String args[]){
+        print(5);
+       print("holle");
+        print(5.5f);
+    } 
+}
+

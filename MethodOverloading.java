@@ -12,12 +12,12 @@ public class Test{
     }
 
 }
-//Correct code...
+//Correct code...with method overloading
 public class Test{
 
     public static void method1(int x){
 
-        System.out.println("method1");
+        System.out.println(x);
 
     }
 

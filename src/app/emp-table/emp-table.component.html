@@ -1,0 +1,16 @@
+<br/>
+<table>
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>age</th>
+    <th>City</th>
+  </tr>
+  <tr *ngFor = "let item of employeeService.arr1,let i = index">
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+    <td>{{item.city}}</td>
+  </tr>
+</table>
+

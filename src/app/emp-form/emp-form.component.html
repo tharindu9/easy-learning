@@ -1,0 +1,29 @@
+
+<div class="empForm">
+
+<br/>
+<form>
+  
+  <div class="form-group  col-md-12">
+    <input name="name" placeholder="enter name . . ." #fullName="ngModel" [(ngModel)]="employee.name"
+     class="form-control" >
+   
+  </div>
+
+  <div class="form-group  col-md-12">
+      <input type="number" placeholder="enter age . . ." name="age" #fullName="ngModel" [(ngModel)]="employee.age"
+       class="form-control" >
+    </div>
+  
+  <div class="form-group  col-md-12">
+      <input name="city" placeholder="enter city . . ." #fullName="ngModel" [(ngModel)]="employee.city"
+       class="form-control" >
+     
+    </div>
+
+  <div class="form-group col-md-12" >
+    <button type="submit" class="btn btn-lg btn-block btn-info" (click)="doSomething()">SUBMIT</button>
+  </div>
+ 
+</form>
+</div>

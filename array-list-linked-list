@@ -1,0 +1,36 @@
+
+Before we compare LinkedList and Arraylist we will see when we should use a list implementation in java. List can be used to store data in order(insertion order) and to keep duplicate entities. So what list can do? Basically it can add elements or remove elements. Let’s see how ArrayList and LinkedList do those operations.
+ArrayList
+ArrayList has been implemented using a dynamic array. What is that meaning, In java, we know the length of an array is fixed. But in ArrayList, simply think we have a normal array and we insert some elements to the normal array and there is a way to return another array with the same name. So we had an array, we put some data to array, it gives a new array with the same name. A similar process happened when removing the elements from an ArrayList.Likewise, that array can be changed dynamically. That the simple meaning of how dynamic array works. When new element adds (except to the end of ArrayList) to an ArrayList, all the elements right to new element should be shifted to the right.
+Let’s take an ArrayList with 6 elements
+
+Let's add an element to 2nd index
+add(2,” new”)
+Now what is happened ? ” new" come to index 2. All other values right side to index 2 should be shifted to the right.
+
+You can see here we have added one element, but 4 elements have been shifted to the right. If it had 1000 elements after index 2 those all should be added to the right.
+Let’s see what happend delete an element
+delete(2)
+
+When deleting the element of index 2, all elements right to index 2 should be shifted to left.
+
+LinkedList
+LinkedList has been implemented using both List and Deque interfaces. LinkedList has facilities to add elements both beging or/and from the end at a constant time. Every LinkedList node has two special nodes call previous node and next node. What happened when adding a new element to LinkedList is it’ previous reference, point to the new node’s left node and it is next reference, point to the left of the new node.
+Let’s take a LinkedList with 6 nodes.
+
+Let’s add a new node.
+add(2,”new")
+
+It is clear that only three nodes are in the stage. Other nodes are not effected when adding a new node(element). Though if we have 1000 of nodes, only two nodes of the existing list are changed.
+Since LinkedList has implemented both List and deque interfaces,it provide some additional features to add data such as addFirst() ,addLast().
+When we delete an element in a LinkedList, just it left node and right node are connected. It is not effected to other nodes.Since LinkedList has implemented deque it provide some additional features than ArrayList such as deleteFirst() , deleteLast().
+Comparing read(get) elements from ArrayList and LinkedList
+We already know that ArrayList has been implemented using a dynamic array. So ArrayLists has behaviors of arrays and index base. When we read data from ArrayList it just checks the index and give the value and typically takes O(1) times.
+How is the LinkedList perform this?
+LinkedList is not base on indexes that are based on nodes(chain of nodes). So takes more time than ArrayList to read values. Why because nodes do not have indexes in linkedLists(Can invoke values using get(index) but those are logical indexes not like array indexes).Assume we need to read the data of index N,then we need to start with head node and go along the list N times it takes O(N) times.
+Summery
+Both ArrayList and LinkedList have implemented List interface.
+LinkedList has implemented deque as well.
+LinkedList provide additional function for inserting and removing data such as addFirst(),removeFirst().
+LinkedList is better to use if we use to add and remove operations more than reading data from a list.
+ArrayList is better to use if we need to read data frequently from a list.
